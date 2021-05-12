@@ -25,7 +25,8 @@ defmodule CodeSigning.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ed25519, "~> 1.3"}
+      {:ed25519, "~> 1.3"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 
