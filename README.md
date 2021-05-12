@@ -1,6 +1,6 @@
 # CodeSigning
 
-**TODO: Add description**
+Elixir code signing and verification by embedding Ed25519 signatures in BEAM files.
 
 ## Installation
 
@@ -14,8 +14,3 @@ def deps do
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/code_signing](https://hexdocs.pm/code_signing).
-

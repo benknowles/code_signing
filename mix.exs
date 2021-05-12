@@ -6,7 +6,11 @@ defmodule CodeSigning.MixProject do
       app: :code_signing,
       version: "0.1.0",
       elixir: "~> 1.11",
+      source_url: "https://github.com/benknowles/code_signing",
+      build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
       deps: deps()
     ]
   end
@@ -22,6 +26,23 @@ defmodule CodeSigning.MixProject do
   defp deps do
     [
       {:ed25519, "~> 1.3"}
+    ]
+  end
+
+  defp description do
+    """
+    Elixir code signing and verification by embedding Ed25519 signatures in BEAM files.
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["Ben Knowles"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/benknowles/code_signing"
+      }
     ]
   end
 end
